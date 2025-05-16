@@ -1,10 +1,11 @@
 import { Staff } from "@/src-tauri/bindings/Staff"
 import { invoke } from "@tauri-apps/api/core"
-import { use, useEffect, useState } from "react"
+import { use } from "react"
 
 export default function Staffs() {
   const staffs = use(invoke<Staff[]>('get_staff_list'))
   
+  // THIS IS WILL WORKS ON WINDOWS
   // const [staffs, setStaffs] = useState<Staff[]>([])
 
   // useEffect(() => {
